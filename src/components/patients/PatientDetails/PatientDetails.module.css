@@ -1,0 +1,138 @@
+.details_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1rem;
+  gap: 1rem;
+}
+
+.patient_data {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #008080;
+  gap: 2rem;
+  width: 90%;
+  /* padding: 2rem 0; */
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.section_heading {
+  font-size: 1.3rem;
+  color: #011b1b;
+  align-self: center;
+  padding-top: 1rem;
+}
+
+.details_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.patient_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.details_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.values_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.patient_details > div:nth-child(even) {
+  background-color: #fff;
+}
+
+.patient_details > div:nth-child(odd) {
+  background-color: #00a1a1;
+}
+
+.details_heading {
+  color: #002222;
+  padding: 0.5rem 1rem;
+}
+
+.patient_name {
+  color: #002222;
+}
+
+.field_name {
+  font-size: 0.85rem;
+  color: yellowgreen;
+  font-weight: 600;
+}
+
+.field_value {
+  font-size: 0.85rem;
+  color: #0a1930;
+  font-weight: 500;
+}
+
+.navigation_container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.redirect_link,
+.delete_button,
+.edit_link {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.redirect_link,
+.edit_link {
+  text-decoration: none;
+}
+
+.redirect_link {
+  background-color: #015a5a;
+}
+
+.delete_button {
+  background-color: #dd0303;
+  border: none;
+  cursor: pointer;
+}
+
+.edit_link {
+  background-color: #0096ff;
+}
+
+.delete_button:hover {
+  background-color: red;
+}
+
+.redirect_link:hover {
+  background-color: #005050;
+}
+
+.edit_link:hover {
+  background-color: #0047ab;
+}

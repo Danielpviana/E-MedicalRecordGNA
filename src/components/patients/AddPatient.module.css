@@ -1,0 +1,87 @@
+.add_patient_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 1rem;
+  height: 100%;
+  gap: 1rem;
+}
+
+.form_section_heading {
+  font-size: 1.3rem;
+  color: #025252;
+  align-self: center;
+}
+
+.error_message {
+  color: red;
+}
+
+.personal_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 2rem;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 2rem 0;
+}
+
+.personal_details_inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 80%;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.input_label {
+  color: #008080;
+}
+
+.required_sign {
+  color: red;
+  align-self: self-start;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.optional_message {
+  color: #c4c2c2;
+}
+
+.input_area {
+  width: 20rem;
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid #008080;
+  border-radius: 4px;
+  color: inherit;
+  font-family: inherit;
+  color: inherit;
+  margin-right: 0.5rem;
+}
+
+.submit_btn {
+  background-color: #008080;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.submit_btn:hover {
+  background-color: #005050;
+}

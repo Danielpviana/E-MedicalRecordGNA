@@ -1,0 +1,89 @@
+.authFormsContainter {
+  text-align: center;
+  max-width: 40rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 6.5rem;
+  position: relative;
+  background-color: #fff;
+  color: #141c42;
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+}
+
+.authFormsContainter form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.authFormInput {
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #141c42;
+  border-radius: 8px;
+  padding: 0.7rem 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.authButtonsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.navigateBtn,
+.registerBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+.registerBtn {
+  background-color: #16297e;
+  color: #eff1fd;
+}
+
+.navigateBtn {
+  color: #16297e;
+  background-color: #eff1fd;
+  border: 1px solid #16297e;
+}
+
+.promptMessage {
+  margin: 0;
+}
+
+.authErrorMessage {
+  color: #ff0000;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1024px) {
+  .authFormsContainter {
+    margin-top: 12rem;
+    margin-bottom: 0;
+  }
+
+  .navigateBtn,
+  .registerBtn {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .authFormsContainter {
+    margin-top: 6.5rem;
+    margin-bottom: 0;
+  }
+}

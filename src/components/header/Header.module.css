@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10rem;
+  width: 100%;
+  padding: 1rem 4rem;
+  border-bottom: 1px solid #e6e4e4;
+  top: 0;
+  height: 4rem;
+}
+
+.doctor_details,
+.name_image_cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6rem;
+  color: #000000;
+}
+
+.doctor_details {
+  gap: 2rem;
+}
+
+.name_image_cont {
+  gap: 0.7rem;
+  margin-right: 0.5rem;
+}
+
+.name_icon_cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2px;
+}
+
+.heading {
+  font-size: 0.75rem;
+  color: #026937;
+}
+
+.doctor_avatar {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #d3d3d3;
+  border-radius: 50%;
+}
+
+.notification_btn {
+  background-color: inherit;
+  border: none;
+  font-size: 1.4rem;
+  color: #008080;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.75rem;
+  cursor: pointer;
+}

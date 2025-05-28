@@ -1,0 +1,18 @@
+.table_body_col {
+  padding: 1rem 0.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.view_btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #026937;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+}
+
+.view_btn:hover {
+  background-color: #43b649;
+}
