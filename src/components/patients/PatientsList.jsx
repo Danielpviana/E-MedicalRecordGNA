@@ -25,6 +25,7 @@ const PatientsList = () => {
   return (
     <div className="p-6 bg-white shadow-lg rounded-lg max-w-4xl mx-auto">
       <div className={classes.patients_list_container}>
+        <h2 className="text-lg font-bold mb-4 text-gray-700">Listado de pacientes</h2>
         <div className="m-2">
           <input
             type="text"
@@ -62,7 +63,7 @@ const PatientsList = () => {
           </tbody>
         </table>
       </div>
-    </div>
+    </div >
   );
 };
 

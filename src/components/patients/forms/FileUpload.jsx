@@ -46,7 +46,7 @@ export default function FileUpload({ patientId }) {
   return (
     <div className="p-6 border rounded-lg shadow-md bg-white">
       <form className="space-y-6">
-        <h2 className="text-lg font-bold mb-4 text-gray-700">Gargue de archivos</h2>
+        <h2 className="text-lg font-bold mb-4 text-gray-700">Cargue de archivos</h2>
         <div>
           <label className="font-semibold text-gray-700">Cargar archivos de estudios/bioseñales</label>
           <input

@@ -55,7 +55,7 @@ export default function SideBar() {
               <AiFillSchedule size={20} />
               <p>Agregar</p>
             </Link>
-            <Link to="/edit-patient" className="flex items-center space-x-2 p-2 rounded hover:bg-gray-200 text-white hover:text-black">
+            <Link to="/patients" className="flex items-center space-x-2 p-2 rounded hover:bg-gray-200 text-white hover:text-black">
               <AiFillSchedule size={20} />
               <p>Editar</p>
             </Link>
