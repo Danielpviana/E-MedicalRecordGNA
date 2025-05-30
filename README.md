@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# 🏥 E-MedicalRecordGNA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**E-MedicalRecordGNA** es una aplicación web desarrollada con React y Tailwind CSS que permite la gestión de historias clínicas electrónicas. Este proyecto tiene como objetivo proporcionar una plataforma sencilla y eficiente para el registro y consulta de datos médicos de pacientes.
 
-## Available Scripts
+## 🚀 Características
 
-In the project directory, you can run:
+- Registro y actualización de información médica de pacientes.
+- Interfaz de usuario responsiva y amigable.
+- Estructura modular para facilitar el mantenimiento y escalabilidad.
 
-### `npm start`
+## 🛠️ Tecnologías Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Create React App](https://create-react-app.dev/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Instalación
 
-### `npm test`
+1. Clona el repositorio:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/Danielpviana/E-MedicalRecordGNA.git
+cd E-MedicalRecordGNA
+```
+2. Instala las dependencias:
 
-### `npm run build`
+```
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Inicia la aplicación en modo desarrollo:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Instalar dependencias del backend
 
-### `npm run eject`
+```
+cd \backend
+```
+2. Instala las dependencias:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Inicia la aplicación en modo desarrollo:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+node \server.js
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+La aplicación estará disponible en http://localhost:3000.
 
-## Learn More
+📁 Estructura del Proyecto
+csharp
+Copiar
+Editar
+E-MedicalRecordGNA/
+├── backend/            # Lógica del servidor (si aplica)
+├── public/             # Archivos públicos
+├── src/                # Código fuente de React
+│   ├── components/     # Componentes reutilizables
+│   ├── pages/          # Páginas de la aplicación
+│   ├── services/       # Servicios y llamadas a APIs
+│   └── App.js          # Componente principal
+├── tailwind.config.js  # Configuración de Tailwind CSS
+├── package.json        # Dependencias y scripts
+└── README.md           # Documentación del proyecto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+📄 Licencia
+Este proyecto está bajo la licencia MIT.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📚 Documentación Técnica
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 1. Introducción
 
-### Analyzing the Bundle Size
+**E-MedicalRecordGNA** es una solución web para la gestión de historias clínicas electrónicas, facilitando el registro, actualización y consulta de información médica de pacientes. Está diseñada para ser intuitiva y adaptable a diferentes dispositivos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 2. Requisitos Previos
 
-### Making a Progressive Web App
+- Node.js (versión 14 o superior)
+- npm (versión 6 o superior)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 3. Instalación y Ejecución
 
-### Advanced Configuration
+Sigue los pasos mencionados en el archivo `README.md` para clonar, instalar dependencias e iniciar la aplicación.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 4. Estructura del Código
 
-### Deployment
+- **`src/components/`**: Contiene componentes reutilizables como formularios, botones y encabezados.
+- **`src/pages/`**: Incluye las diferentes vistas o páginas de la aplicación, como la lista de pacientes y el formulario de registro.
+- **`src/services/`**: Módulos encargados de la comunicación con APIs o servicios externos.
+- **`tailwind.config.js`**: Configuración personalizada de Tailwind CSS para adaptar estilos según las necesidades del proyecto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 5. Estilos y Diseño
 
-### `npm run build` fails to minify
+Se utiliza Tailwind CSS para el diseño y estilo de la aplicación, lo que permite una personalización rápida y coherente de la interfaz de usuario.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 6. Despliegue
+
+Para generar una versión de producción optimizada:
+
+```
+npm run build
+```
+
+Esto creará una carpeta build/ lista para ser desplegada en servicios como Netlify, Vercel o GitHub Pages.
+
+7. Contribuciones
+Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
+
+Haz un fork del repositorio.
+
+Crea una nueva rama: git checkout -b feature/nueva-funcionalidad.
+
+Realiza tus cambios y haz commit: git commit -m 'Agrega nueva funcionalidad'.
+
+Sube tus cambios: git push origin feature/nueva-funcionalidad.
+
+Abre un Pull Request detallando los cambios realizados.
