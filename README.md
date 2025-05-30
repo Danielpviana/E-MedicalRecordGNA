@@ -54,20 +54,28 @@ node \server.js
 La aplicación estará disponible en http://localhost:3000.
 
 📁 Estructura del Proyecto
-csharp
-Copiar
-Editar
 E-MedicalRecordGNA/
+
 ├── backend/            # Lógica del servidor (si aplica)
+
 ├── public/             # Archivos públicos
+
 ├── src/                # Código fuente de React
+
 │   ├── components/     # Componentes reutilizables
+
 │   ├── pages/          # Páginas de la aplicación
+
 │   ├── services/       # Servicios y llamadas a APIs
+
 │   └── App.js          # Componente principal
+
 ├── tailwind.config.js  # Configuración de Tailwind CSS
+
 ├── package.json        # Dependencias y scripts
+
 └── README.md           # Documentación del proyecto
+
 
 📄 Licencia
 Este proyecto está bajo la licencia MIT.
