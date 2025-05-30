@@ -118,7 +118,7 @@ npm run build
 
 Esto creará una carpeta build/ lista para ser desplegada en servicios como Netlify, Vercel o GitHub Pages.
 
-7. Contribuciones
+### 7. Contribuciones
 Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
 
 Haz un fork del repositorio.
