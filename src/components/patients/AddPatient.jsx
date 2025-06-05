@@ -88,7 +88,7 @@ export default function AddPatientCard() {
         </div>
         <div>
           <label className="font-semibold">Identificación:</label>
-          <input type="text" name="idnumber" value={formData.idnumber} onChange={handleChange} className="border p-2 w-full" disabled={patientId !== null} />
+          <input type="number" name="idnumber" value={formData.idnumber} onChange={handleChange} className="border p-2 w-full" disabled={patientId !== null} />
         </div>
         <div>
           <label className="font-semibold">Tipo de identificación:</label>
@@ -104,7 +104,7 @@ export default function AddPatientCard() {
         </div>
         <div>
           <label className="font-semibold">Teléfono:</label>
-          <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="border p-2 w-full" disabled={patientId !== null} />
+          <input type="number" name="phone" value={formData.phone} onChange={handleChange} className="border p-2 w-full" disabled={patientId !== null} />
         </div>
         <div>
           <label className="font-semibold">Email:</label>
@@ -127,6 +127,12 @@ export default function AddPatientCard() {
             </label>
           </div>
           <div className="flex justify-center items-center m-4 border-t pb-2">
+            <a
+              href="/"
+              className="border px-4 py-2 mt-4 rounded bg-gray-500 text-white hover:bg-gray-600"
+            >
+              Volver
+            </a>
             <button
               onClick={handleSubmit}
               className={`border px-4 py-2 mt-4 rounded ${patientId ? "bg-gray-400 cursor-not-allowed" : "bg-[#026937] text-white"}`}

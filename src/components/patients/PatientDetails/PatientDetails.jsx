@@ -139,6 +139,12 @@ export default function PatientDetails({ patientId }) {
             </label>
           </div>
           <div className="flex justify-center items-center m-4 border-t pb-2">
+            <a
+              href="/"
+              className="border px-4 py-2 mt-4 rounded bg-gray-500 text-white hover:bg-gray-600"
+            >
+              Volver
+            </a>
             <button
               onClick={handleEdit}
               className={'border px-4 py-2 mt-4 rounded bg-[#026937] text-white'}

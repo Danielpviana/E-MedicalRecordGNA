@@ -62,10 +62,10 @@ export default function GinecoForm({ patientId }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { name: "primerasRelacionesSexuales", label: "Primeras relaciones sexuales", placeholder: "Edad" },
-              { name: "vidaSexualActiva", label: "Vida sexual activa", placeholder: "Sí / No" },
+              { name: "vidaSexualActiva", label: "Vida sexual activa", placeholder: "Estado" },
               { name: "numeroConyuges", label: "Número de cónyuges", placeholder: "Cantidad" },
-              { name: "preferenciasSexuales", label: "Preferencias sexuales", placeholder: "Sí / No" },
-              { name: "relacionesExtramaritales", label: "Relaciones extramaritales", placeholder: "Sí / No" },
+              { name: "preferenciasSexuales", label: "Preferencias sexuales", placeholder: "Estado" },
+              { name: "relacionesExtramaritales", label: "Relaciones extramaritales", placeholder: "Estado" },
             ].map((field, index) => (
               <div key={index}>
                 <label className="font-semibold text-gray-700">{field.label}:</label>
