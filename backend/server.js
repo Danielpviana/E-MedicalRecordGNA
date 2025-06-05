@@ -5,6 +5,7 @@ const settings = require('./env.js');
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use('/static', express.static('uploads'))
 
 // Import routes
 const patientRoutes = require("./routes/patientRoutes"); // Create this file

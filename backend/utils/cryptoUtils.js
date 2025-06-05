@@ -58,9 +58,11 @@ function decrypt(encryptedText) {
 // const encrypted = encrypt(sensitiveData);
 // console.log("🔒 Encrypted Data:", encrypted);
 
-// const decrypted = decrypt(encrypted);
-// console.log("🔓 Decrypted Data:", decrypted);
-// console.log(SECRET_KEY);
+// (() => {
+//   const decrypted = decrypt('pJ+UuYn/yPMZajbA:T+uVar3htvcX00QJH91LUoaC2hFxaw6j82yDr9oX6j6w18pnc9AxTkSqW2ywSKqCnAax:d81ff6a5b6a54572e9f206fce3c3343b');
+//   console.log("🔓 Decrypted Data:", decrypted);
+// })();
+
 
 
 module.exports = { encrypt, decrypt };

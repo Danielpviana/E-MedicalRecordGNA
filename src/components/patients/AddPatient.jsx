@@ -37,11 +37,11 @@ export default function AddPatientCard() {
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDateObj.getDate())) {
       age--;
     }
-    
+
     // Update formData with both birthdate and calculated age
     setFormData({ ...formData, birthdate: birthdate, age: age });
     console.log(formData);
-    
+
   };
 
   const handleGenderChange = (e) => {
@@ -74,13 +74,6 @@ export default function AddPatientCard() {
       {/* Header */}
       <div className="flex justify-between items-center mb-4 border-b pb-2">
         <h2 className="text-xl font-bold">Ficha Paciente</h2>
-        <button
-          onClick={handleSubmit}
-          className={`border px-4 py-2 rounded ${patientId ? "bg-gray-400 cursor-not-allowed" : "bg-blue-500 text-white"}`}
-          disabled={patientId !== null}
-        >
-          {patientId ? "Paciente creado" : "Crear paciente"}
-        </button>
       </div>
 
       {/* Patient Info */}
@@ -133,6 +126,15 @@ export default function AddPatientCard() {
               Otro
             </label>
           </div>
+          <div className="flex justify-center items-center m-4 border-t pb-2">
+            <button
+              onClick={handleSubmit}
+              className={`border px-4 py-2 mt-4 rounded ${patientId ? "bg-gray-400 cursor-not-allowed" : "bg-[#026937] text-white"}`}
+              disabled={patientId !== null}
+            >
+              {patientId ? "Paciente creado" : "Crear paciente"}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -141,7 +143,7 @@ export default function AddPatientCard() {
         {["Consulta", "Ant. generales", "Ant. personales", "Ant. sexuales", "Examen físico", "Examen neurológico", "Subir archivos"].map((tab) => (
           <button
             key={tab}
-            className={`px-3 py-2 text-sm font-medium border-b-2 ${activeTab === tab ? "border-blue-500 text-blue-500" : "border-transparent"}`}
+            className={`px-3 py-2 text-sm font-medium border-b-2 ${activeTab === tab ? "border-[#026937] text-[#026937]" : "border-transparent"}`}
             onClick={() => setActiveTab(tab)}
           >
             {tab}

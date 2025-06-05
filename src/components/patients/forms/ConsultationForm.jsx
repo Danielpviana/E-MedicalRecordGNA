@@ -76,7 +76,7 @@ export default function ConsultationForm({ patientId }) {
           <button
             type="button"
             onClick={sendConsultationData} // ✅ Aquí se corrige
-            className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition"
+            className="border px-4 py-2 mt-4 rounded bg-[#026937] text-white shadow-md hover:bg-[#2d9160] transition"
           >
             Guardar
           </button>

@@ -17,7 +17,7 @@ export default function PatientDetails({ patientId }) {
     gender: "",
   });
 
-  patientId = useParams().id;  
+  patientId = useParams().id;
   const [isSubmitting, setIsSubmitting] = useState(false);
   // const [editPatient, setEditPatient] = useState(false);
 
@@ -86,35 +86,29 @@ export default function PatientDetails({ patientId }) {
       {/* Header */}
       <div className="flex justify-between items-center mb-4 border-b pb-2">
         <h2 className="text-xl font-bold">Ficha Paciente</h2>
-        <button
-          onClick={handleEdit}
-          className={`border px-4 py-2 rounded bg-blue-500 text-white`}
-        >
-          Editar paciente
-        </button>
       </div>
 
       {/* Patient Info */}
       <div className="grid grid-cols-2 gap-4 text-sm">
         <div>
           <label className="font-semibold">Nombre:</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} className="border p-2 w-full"  />
+          <input type="text" name="name" value={formData.name} onChange={handleChange} className="border p-2 w-full" />
         </div>
         <div>
           <label className="font-semibold">Apellidos:</label>
-          <input type="text" name="lastname" value={formData.lastname} onChange={handleChange} className="border p-2 w-full"  />
+          <input type="text" name="lastname" value={formData.lastname} onChange={handleChange} className="border p-2 w-full" />
         </div>
         <div>
           <label className="font-semibold">Identificación:</label>
-          <input type="text" name="idnumber" value={formData.idnumber} onChange={handleChange} className="border p-2 w-full"  />
+          <input type="text" name="idnumber" value={formData.idnumber} onChange={handleChange} className="border p-2 w-full" />
         </div>
         <div>
           <label className="font-semibold">Tipo de identificación:</label>
-          <input type="text" name="idtype" value={formData.idtype} onChange={handleChange} className="border p-2 w-full"  />
+          <input type="text" name="idtype" value={formData.idtype} onChange={handleChange} className="border p-2 w-full" />
         </div>
         <div>
           <label className="font-semibold">Nacimiento:</label>
-          <input type="date" name="birthdate" value={formData.birthdate} onChange={handleBirthChange} className="border p-2 w-full"  />
+          <input type="date" name="birthdate" value={formData.birthdate} onChange={handleBirthChange} className="border p-2 w-full" />
         </div>
         <div>
           <label className="font-semibold">Edad:</label>
@@ -122,27 +116,33 @@ export default function PatientDetails({ patientId }) {
         </div>
         <div>
           <label className="font-semibold">Teléfono:</label>
-          <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="border p-2 w-full"  />
+          <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="border p-2 w-full" />
         </div>
         <div>
           <label className="font-semibold">Email:</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} className="border p-2 w-full"  />
+          <input type="email" name="email" value={formData.email} onChange={handleChange} className="border p-2 w-full" />
         </div>
         <div className="col-span-2">
           <label className="font-semibold">Género:</label>
           <div className="flex gap-4 mt-1">
             <label className="flex items-center">
-              <input type="radio" name="gender" value="M" checked={formData.gender === "M"} onChange={handleGenderChange} className="mr-2"  />
+              <input type="radio" name="gender" value="M" checked={formData.gender === "M"} onChange={handleGenderChange} className="mr-2" />
               Masculino
             </label>
             <label className="flex items-center">
-              <input type="radio" name="gender" value="F" checked={formData.gender === "F"} onChange={handleGenderChange} className="mr-2"  />
+              <input type="radio" name="gender" value="F" checked={formData.gender === "F"} onChange={handleGenderChange} className="mr-2" />
               Femenino
             </label>
             <label className="flex items-center">
-              <input type="radio" name="gender" value="O" checked={formData.gender === "O"} onChange={handleGenderChange} className="mr-2"  />
+              <input type="radio" name="gender" value="O" checked={formData.gender === "O"} onChange={handleGenderChange} className="mr-2" />
               Otro
             </label>
+          </div>
+          <div className="flex justify-center items-center m-4 border-t pb-2">
+            <button
+              onClick={handleEdit}
+              className={'border px-4 py-2 mt-4 rounded bg-[#026937] text-white'}
+            >Editar paciente</button>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@ export default function PatientDetails({ patientId }) {
         {["Consulta", "Ant. generales", "Ant. personales", "Ant. sexuales", "Examen físico", "Examen neurológico", "Subir archivos"].map((tab) => (
           <button
             key={tab}
-            className={`px-3 py-2 text-sm font-medium border-b-2 ${activeTab === tab ? "border-blue-500 text-blue-500" : "border-transparent"}`}
+            className={`px-3 py-2 text-sm font-medium border-b-2 ${activeTab === tab ? "border-[#026937] text-[#026937]" : "border-transparent"}`}
             onClick={() => setActiveTab(tab)}
           >
             {tab}

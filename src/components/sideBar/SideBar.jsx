@@ -40,7 +40,7 @@ export default function SideBar() {
             <p className="text-white font-semibold px-2 mb-1">INICIO</p>
             <Link to="/" className="flex items-center space-x-2 p-2 rounded hover:bg-gray-200 text-white hover:text-black">
               <AiFillHome size={20} />
-              <p>Overview</p>
+              <p>Menú principal</p>
             </Link>
           </div>
 

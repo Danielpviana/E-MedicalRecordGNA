@@ -2,6 +2,8 @@ const express = require("express");
 const { encrypt, decrypt } = require("../utils/cryptoUtils.js");
 const pool = require("../db.js");
 const { v1: uuidv1 } = require("uuid"); // Import UUID v1
+const fs = require('fs/promises');
+const path = require('path');
 
 const { upload } = require('../utils/multer.js')
 
@@ -331,15 +333,16 @@ router.post("/patient-analysis/saveNeurologicalExam", async (req, res) => {
   }
 });
 
+
 // Manejo de archivos
-router.post('/patient-analysis/upload', upload.single('file'), async (req, res) => {
+router.post('/patient-analysis/upload', upload.array('files'), async (req, res) => {
   const patient_id = req.body.patientId;
-  const fileUploaded = req.file;
+  // const fileUploaded = req.files;
 
   try {
     await pool.query(
       `UPDATE patient_analysis SET file_records = ? WHERE patient_id = ?`,
-      [encrypt(fileUploaded.path), patient_id]
+      [encrypt(`uploads/${patient_id}`), patient_id]
     );
 
     res.json({ message: "Archivo guardado correctamente" });
@@ -347,12 +350,25 @@ router.post('/patient-analysis/upload', upload.single('file'), async (req, res) 
     console.error("Database error:", error);
     res.status(500).json({ error: "Error al guardar el archivo" });
   }
+});
 
-  // if (!req.file) {
-  //   return res.status(400).send('No file uploaded.');
-  // }
-  // res.status(200).send('File uploaded successfully.');
 
+// Listado de archivos
+router.get('/patient-analysis/files/:patientId', async (req, res) => {
+  const folderPath = path.join(__dirname, `../uploads/${req.params.patientId}`);
+
+  try {
+    const files = await fs.readdir(folderPath);
+    const basePath = `${req.protocol}://${req.get('host')}`
+    const fileList = files.map(file => ({
+      name: file,
+      path: `${basePath}/static/${req.params.patientId}/${file}`
+    }))
+    res.json({ files: fileList });
+  } catch (error) {
+    console.error("Database error:", error);
+    res.status(500).json({ error: "Error al guardar el archivo" });
+  }
 });
 
 
