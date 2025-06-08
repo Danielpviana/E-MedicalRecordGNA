@@ -63,7 +63,7 @@ export default function GinecoForm({ patientId }) {
             {[
               { name: "primerasRelacionesSexuales", label: "Primeras relaciones sexuales", placeholder: "Edad" },
               { name: "vidaSexualActiva", label: "Vida sexual activa", placeholder: "Estado" },
-              { name: "numeroConyuges", label: "Número de cónyuges", placeholder: "Cantidad" },
+              { name: "numeroConyuges", label: "Número de parejas sexuales", placeholder: "Cantidad" },
               { name: "preferenciasSexuales", label: "Preferencias sexuales", placeholder: "Estado" },
               { name: "relacionesExtramaritales", label: "Relaciones extramaritales", placeholder: "Estado" },
             ].map((field, index) => (

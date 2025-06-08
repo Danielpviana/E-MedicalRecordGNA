@@ -49,7 +49,6 @@ export default function FileUpload({ patientId }) {
 
     try {
       await axios.post("http://localhost:5000/api/patient-analysis/upload", fileForm);
-
       alert("Archivos guardados correctamente.");
     } catch (error) {
       console.error("Error al guardar los archivos:", error);

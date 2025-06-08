@@ -2,7 +2,7 @@ const express = require("express");
 const { encrypt, decrypt } = require("../utils/cryptoUtils.js");
 const pool = require("../db.js");
 const { v1: uuidv1 } = require("uuid"); // Import UUID v1
-const fs = require('fs/promises');
+const fs = require('fs');
 const path = require('path');
 
 const { upload } = require('../utils/multer.js')
@@ -357,8 +357,11 @@ router.post('/patient-analysis/upload', upload.array('files'), async (req, res) 
 router.get('/patient-analysis/files/:patientId', async (req, res) => {
   const folderPath = path.join(__dirname, `../uploads/${req.params.patientId}`);
 
+  if (!fs.existsSync(folderPath)) {
+    return res.json("Error 404")
+  }
   try {
-    const files = await fs.readdir(folderPath);
+    const files = await fs.promises.readdir(folderPath);
     const basePath = `${req.protocol}://${req.get('host')}`
     const fileList = files.map(file => ({
       name: file,

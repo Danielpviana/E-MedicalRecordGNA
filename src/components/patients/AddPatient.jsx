@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import axios from "axios";
 import DynamicForm from "./DynamicForm";
 
@@ -17,6 +18,7 @@ export default function AddPatientCard() {
   });
   const [patientId, setPatientId] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  let navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -57,9 +59,11 @@ export default function AddPatientCard() {
       const newPatientId = response.data.patient_id;
 
       setPatientId(newPatientId);
-      console.log(formData);
+      // console.log(formData);
 
       alert(`Patient added successfully!`);
+
+      navigate(`/patients/${newPatientId}`);
 
     } catch (error) {
       console.error("Error saving patient:", error);

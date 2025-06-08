@@ -6,7 +6,6 @@ const storage = multer.diskStorage({
         const { patientId } = req.body
         const folderPath = `uploads/${patientId}`
         fs.mkdirSync(folderPath, { recursive: true })
-        console.log(folderPath)
         cb(null, folderPath) // Destination folder
     },
     filename: function (req, file, cb) {

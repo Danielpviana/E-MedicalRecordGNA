@@ -111,7 +111,7 @@ export default function PersonalHistoryForm({ patientId }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               { label: "Vacunaciones recibidas", name: "vacunaciones" },
-              { label: "Género de vida", name: "generoVida" },
+              { label: "Sexo biológico", name: "generoVida" },
               { label: "Alimentación", name: "alimentacion" },
               { label: "Vivienda", name: "vivienda" },
               { label: "Mascotas", name: "mascotas" },
